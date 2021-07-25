@@ -1,0 +1,11 @@
+<svg width="55" height="55" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 40.0179C31.0457 40.0179 40 31.0636 40 20.0179C40 8.97225 31.0457 0.0179443 20 0.0179443C8.9543 0.0179443 0 8.97225 0 20.0179C0 31.0636 8.9543 40.0179 20 40.0179Z" fill="url(#g_logo-tezos0)"/>
+    <path d="M12.7275 13.6542H25.4548L21.693 19.1088H22.7275C25.2384 19.1088 27.273 21.1433 27.273 23.6542V25.4724C27.273 27.9833 25.2384 30.0179 22.7275 30.0179H21.8184C19.8094 30.0179 18.1821 28.3906 18.1821 26.3815" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M16.3638 8.19971V22.7452H20.0001" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+    <defs>
+        <linearGradient id="g_logo-tezos0" x1="40" y1="46.4179" x2="10" y2="4.01795" gradientUnits="userSpaceOnUse">
+            <stop offset="0.484375" stop-color="#3787FF"/>
+            <stop offset="0.994792" stop-color="#96FF43"/>
+        </linearGradient>
+    </defs>
+</svg>

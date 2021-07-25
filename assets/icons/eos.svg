@@ -1,0 +1,13 @@
+<svg width="55" height="55" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M28.1665 55.0179C43.3543 55.0179 55.6665 42.7058 55.6665 27.5179C55.6665 12.3301 43.3543 0.0179443 28.1665 0.0179443C12.9787 0.0179443 0.666504 12.3301 0.666504 27.5179C0.666504 42.7058 12.9787 55.0179 28.1665 55.0179Z" fill="url(#g_logo-eos0)"/>
+    <path d="M28.1642 13.0179L20.7779 21.4588L18.6665 34.1224L28.1642 42.5633L37.662 34.1224L35.5506 21.4588L28.1642 13.0179Z" stroke="white" stroke-width="2.8" stroke-miterlimit="10"/>
+    <path d="M20.7778 23.5701L28.1642 40.4519L35.5506 23.5701" stroke="white" stroke-miterlimit="10"/>
+    <path d="M18.6665 34.1224L28.1642 23.5701L37.662 34.1224" stroke="white" stroke-miterlimit="10"/>
+    <path d="M28.1641 13.0179V23.5702" stroke="white" stroke-miterlimit="10"/>
+    <defs>
+        <linearGradient id="g_logo-eos0" x1="14.9665" y1="0.0179443" x2="63.3665" y2="68.2179" gradientUnits="userSpaceOnUse">
+            <stop offset="0.151042" stop-color="#AE44FF"/>
+            <stop offset="1" stop-color="#34C2FF"/>
+        </linearGradient>
+    </defs>
+</svg>
