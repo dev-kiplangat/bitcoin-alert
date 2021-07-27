@@ -28,7 +28,7 @@ class HeroTextCard extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: " Chebet\n\n",
+              text: " Jane Doe\n\n",
               style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 22,

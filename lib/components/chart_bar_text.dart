@@ -1,5 +1,6 @@
 import 'package:crypto_tracker/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ChartBarText extends StatelessWidget {
   const ChartBarText({
@@ -14,7 +15,10 @@ class ChartBarText extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.biotech),
+            SvgPicture.asset(
+              'assets/icons/BTC.svg',
+              height: 25,
+            ),
             SizedBox(
               width: 10,
             ),

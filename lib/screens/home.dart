@@ -1,5 +1,4 @@
 import 'package:crypto_tracker/components/alert_btn.dart';
-import 'package:crypto_tracker/components/chart_bar_text.dart';
 import 'package:crypto_tracker/components/hero_card.dart';
 import 'package:crypto_tracker/components/trending_coins.dart';
 import 'package:crypto_tracker/constants.dart';
@@ -8,6 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

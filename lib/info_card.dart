@@ -5,16 +5,20 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class InfoCard extends StatelessWidget {
   final String title;
-  final int effectedNum;
-  final Color iconColor;
   final Function press;
+  final String icon;
+  final String currency;
+  final String state;
+  final String price;
 
   const InfoCard({
     Key? key,
     required this.title,
-    required this.effectedNum,
-    required this.iconColor,
+    required this.price,
     required this.press,
+    required this.icon,
+    required this.currency,
+    required this.state,
   }) : super(key: key);
 
   @override
@@ -45,59 +49,75 @@ class InfoCard extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                    right: 10,
+                    top: 15,
+                  ),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                          alignment: Alignment.center,
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              color: iconColor.withOpacity(0.12),
-                              shape: BoxShape.circle),
-                          child: SvgPicture.asset(
-                            'assets/vectors/run.svg',
-                            height: 12,
-                            width: 12,
-                          )),
-                      SizedBox(
-                        width: 5,
+                      SvgPicture.asset(
+                        'assets/icons/$icon',
+                        width: 25,
                       ),
-                      Text(
-                        title,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      )
+                      SizedBox(
+                        width: 10,
+                      ),
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                                text: "$title\n",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: kTextMediumColor,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                            TextSpan(
+                              text: "$currency",
+                              style: TextStyle(
+                                color: kTextMediumColor.withOpacity(.7),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 10),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.only(
+                          top: 10,
+                          left: 40,
+                          right: 10,
+                        ),
                         child: RichText(
                             text: TextSpan(
                                 style: TextStyle(color: kTextColor),
                                 children: [
                               TextSpan(
-                                  text: "$effectedNum \n",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline6!
-                                      .copyWith(fontWeight: FontWeight.bold)),
+                                text: "\$ $price \n",
+                                style: TextStyle(
+                                    color: kTextColor,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
                               TextSpan(
-                                  text: "People",
+                                  text: "$state",
                                   style: TextStyle(
                                     fontSize: 12,
                                     height: 2,
+                                    color: kPrimaryColor,
                                   ))
                             ])),
                       ),
-                      Expanded(
-                        child: LineReportChart(),
-                      )
                     ],
                   ),
                 )
