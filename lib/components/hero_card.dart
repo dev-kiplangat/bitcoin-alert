@@ -2,8 +2,10 @@ import 'package:crypto_tracker/constants.dart';
 import 'package:flutter/material.dart';
 
 class HeroTextCard extends StatelessWidget {
+  final String name;
   const HeroTextCard({
     Key? key,
+    required this.name,
   }) : super(key: key);
 
   @override
@@ -21,21 +23,21 @@ class HeroTextCard extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-              text: "Good Morning",
+              text: "Hi!",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 22,
               ),
             ),
             TextSpan(
-              text: " Jane Doe\n\n",
+              text: " $name\n\n",
               style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 22,
               ),
             ),
             TextSpan(
-              text: "Let's Get <Alerty>!",
+              text: "Let's Get <Crackin>!",
               style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 28,

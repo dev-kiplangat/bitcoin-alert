@@ -1,10 +1,13 @@
 import 'package:crypto_tracker/components/alert_btn.dart';
 import 'package:crypto_tracker/components/hero_card.dart';
+import 'package:crypto_tracker/components/navigator.dart';
 import 'package:crypto_tracker/components/trending_coins.dart';
+import 'package:crypto_tracker/config/user.dart';
 import 'package:crypto_tracker/constants.dart';
 import 'package:crypto_tracker/screens/currencyLIst.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -33,7 +36,11 @@ class HomeScreen extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HeroTextCard(),
+              Consumer<UserModel>(
+                builder: (context, user, child) {
+                  return HeroTextCard(name: user.username);
+                },
+              ),
               Transform.translate(
                 offset: Offset(0, -80),
                 child: Column(

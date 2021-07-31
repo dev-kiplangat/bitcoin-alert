@@ -1,12 +1,24 @@
-import 'package:crypto_tracker/components/navigator.dart';
 import 'package:crypto_tracker/components/theme.dart';
+import 'package:crypto_tracker/config/alerts.dart';
+import 'package:crypto_tracker/config/market.dart';
+import 'package:crypto_tracker/config/user.dart';
 import 'package:crypto_tracker/screens/home.dart';
 import 'package:crypto_tracker/screens/splash_screen.dart';
 import 'package:crypto_tracker/screens/welcome.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => UserModel()),
+        ChangeNotifierProvider(create: (context) => AlertsModel()),
+        ChangeNotifierProvider(create: (context) => Market()),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,8 +30,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
-      // home: PageRenderer(),
-      initialRoute: "/home",
+      initialRoute: "/",
+      themeMode: ThemeMode.system,
       routes: {
         '/': (context) => SplashScreen(duration: 5),
         '/welcome': (context) => IntroScreen(),
