@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   fl_chart:
   flutter_svg: 
+  path_drawing:
 
 
 dev_dependencies:
@@ -51,6 +52,8 @@ flutter:
   assets:
     - assets/vectors/
     - assets/icons/
+    - assets/images/
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
