@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
       // home: PageRenderer(),
-      initialRoute: "/",
+      initialRoute: "/home",
       routes: {
         '/': (context) => SplashScreen(duration: 5),
         '/welcome': (context) => IntroScreen(),
