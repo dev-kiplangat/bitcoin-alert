@@ -14,7 +14,6 @@ class EventsPage extends StatelessWidget {
             image: AssetImage("assets/vectors/bg.jpg"),
             fit: BoxFit.fill,
           ),
-          backgroundBlendMode: BlendMode.colorDodge,
         ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
@@ -22,8 +21,10 @@ class EventsPage extends StatelessWidget {
             elevation: 0,
             backgroundColor: Colors.transparent,
             leading: IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {},
+              icon: Icon(Icons.arrow_back_ios_rounded),
+              onPressed: () {
+                Navigator.pop(context);
+              },
               tooltip: "Toggle Menu",
               color: Colors.black,
             ),

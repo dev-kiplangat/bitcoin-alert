@@ -1,43 +1,64 @@
+import 'dart:developer';
+
+import 'package:crypto_tracker/config/market.dart';
+import 'package:crypto_tracker/config/misc.dart';
+import 'package:crypto_tracker/config/user.dart';
 import 'package:crypto_tracker/info_card.dart';
 import 'package:crypto_tracker/screens/details.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-SingleChildScrollView currencyScrollList(BuildContext context) {
-  return SingleChildScrollView(
-    scrollDirection: Axis.horizontal,
-    child: Row(
-      children: cardsArray(context),
-    ),
-  );
-}
+class CurrentCoins extends StatelessWidget {
+  CurrentCoins({
+    Key? key,
+  }) : super(key: key);
 
-List<Widget> cardsArray(context) {
-  late var cards = <Widget>[];
+  List<Widget> cardsArray(context, market) {
+    var cards = <Widget>[];
 
-  for (var i = 0; i < currencyData.length; i++) {
-    print(cards);
-    cards.add(
-      InfoCard(
-        icon: currencyData[i]["icon"],
-        price: currencyData[i]["price"],
-        state: currencyData[i]["state"],
-        currency: currencyData[i]["currency"],
-        title: currencyData[i]["title"],
-        press: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return DetailsScreen();
-              },
-            ),
-          );
-        },
-      ),
-    );
+    var data = market['data'];
+
+    for (var currencyData in data.keys) {
+      var currencyState = data[currencyData]['data'];
+
+      if (currencyState != null) {
+        cards.add(
+          InfoCard(
+            icon: getIcon[currencyData],
+            price: currencyState['market_price_usd'].toString(),
+            currency: getCurrency[currencyData],
+            title: currencyData,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetailsScreen();
+                  },
+                ),
+              );
+            },
+          ),
+        );
+      }
+    }
+
+    return cards;
   }
 
-  return cards;
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<Market>(
+      builder: (context, market, child) {
+        return SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: cardsArray(context, market.markets),
+          ),
+        );
+      },
+    );
+  }
 }
 
 List currencyData = [

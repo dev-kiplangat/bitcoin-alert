@@ -154,15 +154,7 @@ AppBar buildDetailsBar(BuildContext context) {
   return AppBar(
     backgroundColor: kBackgroundColor,
     elevation: 0,
-    leading: IconButton(
-      onPressed: () {
-        Navigator.pop(context);
-      },
-      icon: Icon(
-        Icons.arrow_back_ios,
-        color: kPrimaryColor,
-      ),
-    ),
+    leading: null,
     title: Text(
       "Profile",
       style: TextStyle(color: kTextMediumColor),

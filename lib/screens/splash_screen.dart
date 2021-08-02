@@ -14,8 +14,9 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
 
-    Future.delayed(Duration(seconds: 5), () {
-      Navigator.pushNamed(context, '/home');
+    Future.delayed(Duration(seconds: 2), () {
+      // navigate to  a new route and clear all the context
+      Navigator.pushNamedAndRemoveUntil(context, "/home", (r) => false);
     });
   }
 

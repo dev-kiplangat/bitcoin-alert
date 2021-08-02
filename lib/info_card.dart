@@ -1,5 +1,4 @@
 import 'package:crypto_tracker/constants.dart';
-import 'package:crypto_tracker/widgets/line_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -8,7 +7,6 @@ class InfoCard extends StatelessWidget {
   final Function press;
   final String icon;
   final String currency;
-  final String state;
   final String price;
 
   const InfoCard({
@@ -18,7 +16,6 @@ class InfoCard extends StatelessWidget {
     required this.press,
     required this.icon,
     required this.currency,
-    required this.state,
   }) : super(key: key);
 
   @override
@@ -99,24 +96,27 @@ class InfoCard extends StatelessWidget {
                           right: 10,
                         ),
                         child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(color: kTextColor),
-                                children: [
+                          text: TextSpan(
+                            style: TextStyle(color: kTextColor),
+                            children: [
                               TextSpan(
-                                text: "\$ $price \n",
+                                text: "current value\n",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  height: 2,
+                                  color: kPrimaryColor,
+                                ),
+                              ),
+                              TextSpan(
+                                text: "\$ $price",
                                 style: TextStyle(
                                     color: kTextColor,
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold),
                               ),
-                              TextSpan(
-                                  text: "$state",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    height: 2,
-                                    color: kPrimaryColor,
-                                  ))
-                            ])),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),

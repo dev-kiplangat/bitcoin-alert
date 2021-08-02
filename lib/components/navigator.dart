@@ -35,6 +35,12 @@ class _PageRenderer extends State<PageRenderer> {
     return Scaffold(
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 20,
+        enableFeedback: true,
+        showUnselectedLabels: true,
+        selectedLabelStyle: TextStyle(
+          color: kTextColor,
+        ),
         items: [
           BottomNavigationBarItem(
             label: 'Dashboard',

@@ -1,4 +1,5 @@
 import 'package:crypto_tracker/constants.dart';
+import 'package:crypto_tracker/screens/create_alert.dart';
 import 'package:crypto_tracker/screens/events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,12 +15,11 @@ class CustomAlertButton extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 25),
       child: InkWell(
         onTap: () {
-          print("tapped ...");
           Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) {
-                return EventsPage();
+                return CreateAlert();
               },
             ),
           );

@@ -1,5 +1,6 @@
 import 'package:crypto_tracker/components/chart_bar_text.dart';
 import 'package:crypto_tracker/constants.dart';
+import 'package:crypto_tracker/screens/create_alert.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -305,14 +306,20 @@ AppBar buildDetailsBar(BuildContext context) {
     ),
     actions: [
       IconButton(
-          onPressed: () {
-            showModal(context);
-          },
-          icon: Icon(
-            Icons.add,
-            color: kPrimaryColor,
-            size: 30,
-          ))
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CreateAlert(),
+            ),
+          );
+        },
+        icon: Icon(
+          Icons.add,
+          color: kPrimaryColor,
+          size: 30,
+        ),
+      ),
     ],
   );
 }

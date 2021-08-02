@@ -32,6 +32,7 @@ dependencies:
   flutter_svg: 
   path_drawing:
   provider:
+  http:
 
 
 dev_dependencies:
@@ -54,7 +55,6 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/vectors/
-
 
   #   - images/a_dot_ham.jpeg
 
