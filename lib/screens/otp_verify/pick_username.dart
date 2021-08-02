@@ -1,5 +1,5 @@
 import 'package:crypto_tracker/constants.dart';
-import 'package:crypto_tracker/screens/home.dart';
+import 'package:crypto_tracker/screens/home/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

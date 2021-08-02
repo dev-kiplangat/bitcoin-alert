@@ -1,5 +1,5 @@
 import 'package:crypto_tracker/constants.dart';
-import 'package:crypto_tracker/screens/currencyLIst.dart';
+import 'package:crypto_tracker/screens/home/components/currencyLIst.dart';
 import 'package:flutter/material.dart';
 
 class CreateAlert extends StatefulWidget {

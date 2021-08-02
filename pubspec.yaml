@@ -33,7 +33,7 @@ dependencies:
   path_drawing:
   provider:
   http:
-
+  sms_autofill: 
 
 dev_dependencies:
   flutter_test:

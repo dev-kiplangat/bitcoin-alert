@@ -1,12 +1,16 @@
 import 'package:crypto_tracker/constants.dart';
+import 'package:crypto_tracker/screens/details/components/icon_stats.dart';
 import 'package:crypto_tracker/widgets/weekly_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'components/app_bar.dart';
+import 'components/hero_card.dart';
 
 class DetailsScreen extends StatelessWidget {
   final data;
+  final String title;
 
-  const DetailsScreen({Key? key, this.data}) : super(key: key);
+  const DetailsScreen({Key? key, this.data, required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class DetailsScreen extends StatelessWidget {
       ),
       child: Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: buildDetailsBar(context),
+          appBar: buildDetailsBar(context, title),
           body: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 15,
@@ -44,7 +48,7 @@ class DetailsScreen extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      buildCaseNumber(context),
+                      HeroCard(),
                       SizedBox(
                         height: 10,
                       ),
@@ -54,13 +58,8 @@ class DetailsScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 40),
-                Text(
-                  "General Stats",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: kTextMediumColor,
-                  ),
+                SectionTitle(
+                  title: "General Stats",
                 ),
                 SizedBox(height: 20),
                 Container(
@@ -82,13 +81,8 @@ class DetailsScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "24h Statistics",
-                        style: TextStyle(
-                          color: kTextColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      SectionTitle(
+                        title: "24h Statistics",
                       ),
                       SizedBox(
                         height: 10,
@@ -125,13 +119,8 @@ class DetailsScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Mempool",
-                        style: TextStyle(
-                          color: kTextColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      SectionTitle(
+                        title: "Mempool",
                       ),
                       SizedBox(
                         height: 10,
@@ -178,54 +167,6 @@ class DetailsScreen extends StatelessWidget {
     );
   }
 
-  Row buildCaseNumber(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SvgPicture.asset(
-          'assets/icons/BTC.svg',
-          height: 40,
-        ),
-        SizedBox(
-          width: 20,
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            RichText(
-              textAlign: TextAlign.start,
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: "40, 031.09  ",
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
-                          color: kPrimaryColor,
-                          height: 1.2,
-                        ),
-                  ),
-                  TextSpan(
-                    text: "   ^ 0.68%",
-                    style: TextStyle(
-                      color: kPrimaryColor,
-                      fontSize: 14,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Text(
-              "Current Stats - ",
-              style: TextStyle(
-                color: kTextMediumColor,
-                fontSize: 16,
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
   statsRow(String title, String value) {
     return Column(
       children: [
@@ -255,96 +196,25 @@ class DetailsScreen extends StatelessWidget {
       ],
     );
   }
-
-  AppBar buildDetailsBar(BuildContext context) {
-    return AppBar(
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      leading: IconButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        icon: Icon(
-          Icons.arrow_back_ios,
-          color: kPrimaryColor,
-        ),
-      ),
-      title: Text(
-        "Bitcoin",
-        style: TextStyle(color: kPrimaryColor, fontSize: 18),
-      ),
-      actions: [
-        IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.more_vert,
-              color: kPrimaryColor,
-            ))
-      ],
-    );
-  }
 }
 
-class IconedStats extends StatelessWidget {
-  const IconedStats({
+class SectionTitle extends StatelessWidget {
+  final title;
+
+  const SectionTitle({
     Key? key,
+    this.title,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.symmetric(
-        vertical: 20,
-        horizontal: 10,
+    return Text(
+      "$title",
+      style: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: kTextMediumColor,
       ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Wrap(
-        runAlignment: WrapAlignment.spaceEvenly,
-        runSpacing: 10,
-        spacing: 40,
-        children: [
-          infoIcons("Blocks", "693, 184", "square-blocks-outline.png"),
-          infoIcons("Transactions", "658, 771, 067", "arrow.png"),
-          infoIcons("Outputs", "1, 790, 470, 928", "left-arrow.png"),
-          infoIcons("Addresses", "38, 265, 754", "wallet.png"),
-        ],
-      ),
-    );
-  }
-
-  Column infoIcons(String title, String value, String image) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          width: 70,
-          height: 70,
-          decoration: BoxDecoration(
-            color: Colors.teal.withOpacity(.09),
-            borderRadius: BorderRadius.circular(50),
-          ),
-          child: Center(
-            child: Image.asset(
-              'assets/images/$image',
-              height: 38,
-            ),
-          ),
-        ),
-        SizedBox(
-          height: 15,
-        ),
-        Text(title),
-        Text(
-          value,
-          style: TextStyle(color: kPrimaryColor),
-        ),
-        SizedBox(
-          height: 15,
-        ),
-      ],
     );
   }
 }

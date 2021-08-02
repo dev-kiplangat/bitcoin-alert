@@ -1,13 +1,15 @@
-import 'package:crypto_tracker/components/alert_btn.dart';
-import 'package:crypto_tracker/components/hero_card.dart';
-import 'package:crypto_tracker/components/trending_coins.dart';
+import 'package:crypto_tracker/screens/home/components/alert_btn.dart';
+import 'package:crypto_tracker/screens/home/components/hero_card.dart';
+import 'package:crypto_tracker/screens/home/components/trending_coins.dart';
 import 'package:crypto_tracker/config/market.dart';
 import 'package:crypto_tracker/config/user.dart';
 import 'package:crypto_tracker/constants.dart';
-import 'package:crypto_tracker/screens/currencyLIst.dart';
+import 'package:crypto_tracker/screens/home/components/currencyLIst.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
+
+import 'components/app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,22 +17,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: kPrimaryColor.withOpacity(.5),
-        elevation: 0,
-        leading: null,
-        title: Text(
-          "Explore",
-          style: TextStyle(color: Colors.white),
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.notification_add),
-            onPressed: () {},
-            color: Colors.teal,
-          ),
-        ],
-      ),
+      appBar: appbar(title: "Explore"),
       body: Consumer<Market>(builder: (context, market, child) {
         return FutureBuilder(
           future: market.fetchCurrency(),

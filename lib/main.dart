@@ -3,11 +3,10 @@ import 'package:crypto_tracker/components/theme.dart';
 import 'package:crypto_tracker/config/alerts.dart';
 import 'package:crypto_tracker/config/market.dart';
 import 'package:crypto_tracker/config/user.dart';
-import 'package:crypto_tracker/screens/create_alert.dart';
-import 'package:crypto_tracker/screens/login.dart';
-import 'package:crypto_tracker/screens/otp_verify.dart';
-import 'package:crypto_tracker/screens/splash_screen.dart';
-import 'package:crypto_tracker/screens/welcome.dart';
+import 'package:crypto_tracker/screens/alert/create_alert.dart';
+import 'package:crypto_tracker/screens/login/login.dart';
+import 'package:crypto_tracker/screens/otp_verify/otp_verify.dart';
+import 'package:crypto_tracker/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -36,8 +35,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       themeMode: ThemeMode.system,
       routes: {
-        '/': (context) => SplashScreen(duration: 5),
-        '/welcome': (context) => IntroScreen(),
+        '/': (context) => SplashScreen(duration: 2),
         '/home': (context) => PageRenderer(),
 
         '/login': (context) => LoginScreen(),

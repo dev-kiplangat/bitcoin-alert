@@ -1,10 +1,7 @@
-import 'dart:developer';
-
 import 'package:crypto_tracker/config/market.dart';
 import 'package:crypto_tracker/config/misc.dart';
-import 'package:crypto_tracker/config/user.dart';
 import 'package:crypto_tracker/info_card.dart';
-import 'package:crypto_tracker/screens/details.dart';
+import 'package:crypto_tracker/screens/details/details.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -33,7 +30,10 @@ class CurrentCoins extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return DetailsScreen();
+                    return DetailsScreen(
+                      title: currencyData,
+                      data: currencyState,
+                    );
                   },
                 ),
               );
