@@ -27,6 +27,9 @@ class InfoCard extends StatelessWidget {
         },
         child: Container(
             width: 220,
+            constraints: BoxConstraints.tightFor(
+              width: 220,
+            ),
             margin: EdgeInsets.only(
               right: 20,
               bottom: 30,
@@ -95,27 +98,25 @@ class InfoCard extends StatelessWidget {
                           left: 40,
                           right: 10,
                         ),
-                        child: RichText(
-                          text: TextSpan(
-                            style: TextStyle(color: kTextColor),
-                            children: [
-                              TextSpan(
-                                text: "current value\n",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  height: 2,
-                                  color: kPrimaryColor,
-                                ),
+                        child: Column(
+                          children: [
+                            Text(
+                              "current value",
+                              style: TextStyle(
+                                fontSize: 12,
+                                height: 2,
+                                color: kPrimaryColor,
                               ),
-                              TextSpan(
-                                text: "\$ $price",
-                                style: TextStyle(
-                                    color: kTextColor,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
+                            ),
+                            Text(
+                              "\$ $price",
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  color: kTextColor,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
                         ),
                       ),
                     ],

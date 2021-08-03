@@ -1,15 +1,20 @@
 import 'package:crypto_tracker/config/market.dart';
 import 'package:crypto_tracker/config/misc.dart';
-import 'package:crypto_tracker/screens/details/details.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'info_card.dart';
 
-class CurrentCoins extends StatelessWidget {
-  CurrentCoins({
-    Key? key,
-  }) : super(key: key);
+class SelectCoins extends StatefulWidget {
+  final Function callback;
+  const SelectCoins({Key? key, required this.callback}) : super(key: key);
+
+  @override
+  _SelectCoinsState createState() => _SelectCoinsState();
+}
+
+class _SelectCoinsState extends State<SelectCoins> {
+  var selectedCard = '';
 
   List<Widget> cardsArray(context, market) {
     var cards = <Widget>[];
@@ -26,19 +31,12 @@ class CurrentCoins extends StatelessWidget {
             price: currencyState['market_price_usd'].toString(),
             currency: getCurrency[currencyData],
             title: currencyData,
+            selected: selectedCard,
             press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return DetailsScreen(
-                      title: currencyData,
-                      icon: getIcon[currencyData],
-                      data: currencyState,
-                    );
-                  },
-                ),
-              );
+              setState(() {
+                selectedCard = currencyData;
+                widget.callback(currencyData);
+              });
             },
           ),
         );

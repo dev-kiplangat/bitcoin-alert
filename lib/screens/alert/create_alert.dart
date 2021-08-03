@@ -1,7 +1,18 @@
 import 'package:crypto_tracker/constants.dart';
-import 'package:crypto_tracker/screens/home/components/currencyLIst.dart';
 import 'package:flutter/material.dart';
 import 'package:select_form_field/select_form_field.dart';
+
+import 'components/currencySelect.dart';
+
+class AlertObj {
+  final String name;
+  final String limit;
+  final String currency;
+  final String frequency;
+
+  const AlertObj(this.name, this.limit, this.currency, this.frequency,
+      {Key? key});
+}
 
 class CreateAlert extends StatefulWidget {
   const CreateAlert({Key? key}) : super(key: key);
@@ -11,9 +22,18 @@ class CreateAlert extends StatefulWidget {
 }
 
 class _CreateAlertState extends State<CreateAlert> {
+  var error = "";
+
+  final Map alertInfo = {
+    "limit": "",
+    "frequency": 'ONCE',
+    "curreny": "",
+    "label": "",
+  };
+
   final List<Map<String, dynamic>> _items = [
     {
-      'value': 'ONE TIME',
+      'value': 'ONCE',
       'label': '     ONE TIME',
       'icon': Icon(Icons.repeat_one),
     },
@@ -24,20 +44,26 @@ class _CreateAlertState extends State<CreateAlert> {
     },
   ];
 
+  abyss({key, value}) {
+    setState(() {
+      alertInfo[key] = value;
+    });
+  }
+
   Widget customSelect() {
     return SelectFormField(
-      type: SelectFormFieldType.dropdown,
-      dialogCancelBtn: "close",
-      enableInteractiveSelection: true,
+        type: SelectFormFieldType.dropdown,
+        dialogCancelBtn: "close",
+        enableInteractiveSelection: true,
 
-      // or can be dialog
-      initialValue: 'ONE TIME',
-      icon: Icon(Icons.repeat),
-      labelText: 'SELECT FREQUENCY',
-      items: _items,
-      onChanged: (val) => print(val),
-      onSaved: (val) => print(val),
-    );
+        // or can be dialog
+        initialValue: alertInfo['frequency'],
+        icon: Icon(Icons.repeat),
+        labelText: '     SELECT FREQUENCY',
+        items: _items,
+        onChanged: (val) {
+          abyss(key: 'frequency', value: val);
+        });
   }
 
   @override
@@ -63,8 +89,8 @@ class _CreateAlertState extends State<CreateAlert> {
       ),
       body: GestureDetector(
         onTap: () {
-          FocusScope.of(context).unfocus();
-          new TextEditingController().clear();
+          // FocusScope.of(context).unfocus();
+          // new TextEditingController().clear();
         },
         child: SingleChildScrollView(
           child: Container(
@@ -72,7 +98,7 @@ class _CreateAlertState extends State<CreateAlert> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: 60,
+                  height: 40,
                 ),
                 SizedBox(
                   width: double.infinity,
@@ -83,60 +109,45 @@ class _CreateAlertState extends State<CreateAlert> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    left: 80,
-                    right: 80,
+                    left: 60,
+                    right: 60,
                     bottom: 20,
                   ),
                   child: Form(
-                    child: TextFormField(
-                      controller: TextEditingController(),
-                      maxLength: 16,
-                      textAlign: TextAlign.center,
-                      keyboardType: TextInputType.numberWithOptions(
-                        decimal: true,
-                      ),
-                      decoration: InputDecoration(
-                        hintText: "0.00",
-                        alignLabelWithHint: true,
-                        // enabled: true,
-                        labelStyle: TextStyle(
-                          textBaseline: TextBaseline.ideographic,
+                    child: Column(
+                      children: [
+                        buildTextForm(),
+                        SizedBox(
+                          height: 10,
                         ),
-                        prefixText: "\$",
-                        floatingLabelBehavior: FloatingLabelBehavior.always,
-                        contentPadding: EdgeInsets.symmetric(
-                          vertical: 20,
-                        ),
-                      ),
+                        if (error != "")
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.error,
+                                color: Colors.red[300],
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Text(
+                                error,
+                                style: TextStyle(
+                                  color: Colors.red[300],
+                                ),
+                              )
+                            ],
+                          ),
+                      ],
                     ),
                   ),
                 ),
                 SizedBox(
                   height: 30,
                 ),
-                Container(
-                  margin: EdgeInsets.only(
-                    left: 40,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Select Coins",
-                        style: TextStyle(
-                          color: kTextColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-
-                      // coins to be here
-                    ],
-                  ),
-                ),
+                CoinSelector(feeder: (callback) {
+                  abyss(key: 'currency', value: callback);
+                }),
                 SizedBox(
                   height: 20,
                 ),
@@ -156,14 +167,14 @@ class _CreateAlertState extends State<CreateAlert> {
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Container(
                         width: double.infinity,
                         child: customSelect(),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                     ],
                   ),
@@ -174,33 +185,111 @@ class _CreateAlertState extends State<CreateAlert> {
                     horizontal: 40,
                     vertical: 30,
                   ),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.red[300],
-                      enableFeedback: true,
-                      padding: EdgeInsets.symmetric(
-                        vertical: 18,
-                      ),
-                      elevation: 20,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                    onPressed: () {},
-                    autofocus: true,
-                    child: Text(
-                      "Create Alert",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+                  child: submitBtn(),
                 ),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  ElevatedButton submitBtn() {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        primary: Colors.red[300],
+        enableFeedback: true,
+        padding: EdgeInsets.symmetric(
+          vertical: 18,
+        ),
+        elevation: 5,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+      ),
+      onPressed: () {
+        print(alertInfo);
+      },
+      autofocus: true,
+      child: Text(
+        "Create Alert",
+        style: TextStyle(
+          fontSize: 18,
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+
+  validator(value) {
+    if (value == 0 || value!.isEmpty) {
+      setState(() {
+        error = "Cannot be blank";
+      });
+    }
+    return null;
+  }
+
+  TextFormField buildTextForm() {
+    return TextFormField(
+      onChanged: (val) {
+        print('changing');
+        abyss(key: 'limit', value: val);
+      },
+      validator: (val) => validator(val),
+      controller: TextEditingController(),
+      maxLength: 16,
+      textAlign: TextAlign.center,
+      keyboardType: TextInputType.numberWithOptions(
+        decimal: true,
+      ),
+      decoration: InputDecoration(
+        hintText: "0.00",
+        alignLabelWithHint: true,
+        enabled: true,
+        labelStyle: TextStyle(
+          textBaseline: TextBaseline.ideographic,
+        ),
+        prefixText: "\$",
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        contentPadding: EdgeInsets.symmetric(
+          vertical: 20,
+        ),
+      ),
+    );
+  }
+}
+
+class CoinSelector extends StatelessWidget {
+  final Function feeder;
+  const CoinSelector({
+    Key? key,
+    required this.feeder,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(
+        left: 40,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Select Coin",
+            style: TextStyle(
+              color: kTextColor,
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SelectCoins(callback: feeder),
+        ],
       ),
     );
   }

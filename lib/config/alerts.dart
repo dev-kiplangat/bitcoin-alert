@@ -16,4 +16,9 @@ class AlertsModel extends ChangeNotifier {
 
     return marketALerts;
   }
+
+  addALert(Map value) {
+    data.add(value);
+    notifyListeners();
+  }
 }

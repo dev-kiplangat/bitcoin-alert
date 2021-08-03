@@ -2,8 +2,19 @@ import 'package:crypto_tracker/constants.dart';
 import 'package:flutter/material.dart';
 
 class AlertCard extends StatelessWidget {
+  final String title;
+  final String createdAt;
+  final String frequency;
+  final String currentPrice;
+  final String watchPrice;
+
   const AlertCard({
     Key? key,
+    required this.title,
+    required this.createdAt,
+    required this.frequency,
+    required this.currentPrice,
+    required this.watchPrice,
   }) : super(key: key);
 
   @override
@@ -28,7 +39,7 @@ class AlertCard extends StatelessWidget {
         children: [
           alertTinyRow(
             "Bitcoin Floody",
-            "2 hours ago",
+            createdAt,
           ),
           Divider(
             height: 30,
@@ -37,7 +48,7 @@ class AlertCard extends StatelessWidget {
           ),
           alertTinyRow(
             "Frequency",
-            "Once",
+            frequency,
           ),
           Divider(
             height: 30,
@@ -47,13 +58,10 @@ class AlertCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              alertMainRowText(
-                "Triggerred When Higher",
-                "0.0216",
-              ),
+              alertMainRowText("Triggerred When Higher", watchPrice),
               alertMainRowText(
                 "Current Price:",
-                "0.0216 ^",
+                currentPrice,
               ),
             ],
           ),
