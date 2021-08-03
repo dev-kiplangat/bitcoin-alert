@@ -32,6 +32,7 @@ class CurrentCoins extends StatelessWidget {
                   builder: (context) {
                     return DetailsScreen(
                       title: currencyData,
+                      icon: getIcon[currencyData],
                       data: currencyState,
                     );
                   },

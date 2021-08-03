@@ -3,51 +3,61 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HeroCard extends StatelessWidget {
+  final String icon;
+  final String value;
+  final String change;
+
   const HeroCard({
     Key? key,
+    required this.icon,
+    required this.value,
+    required this.change,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SvgPicture.asset(
-          'assets/icons/BTC.svg',
+          'assets/icons/$icon',
           height: 40,
         ),
         SizedBox(
-          width: 20,
+          width: 10,
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            RichText(
-              textAlign: TextAlign.start,
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: "40, 031.09  ",
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
-                          color: kPrimaryColor,
-                          height: 1.2,
-                        ),
+            Text(
+              value + " USD         ",
+              style: Theme.of(context).textTheme.headline5!.copyWith(
+                    color: kPrimaryColor,
+                    height: 1.2,
                   ),
-                  TextSpan(
-                    text: "   ^ 0.68%",
-                    style: TextStyle(
-                      color: kPrimaryColor,
-                      fontSize: 14,
-                    ),
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: 10,
+                vertical: 3,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(7, 4),
+                    spreadRadius: 1,
+                    color: kPrimaryColor.withOpacity(.04),
                   ),
                 ],
               ),
-            ),
-            Text(
-              "Current Stats - ",
-              style: TextStyle(
-                color: kTextMediumColor,
-                fontSize: 16,
+              child: Text(
+                '$change',
+                style: TextStyle(
+                  color: kTextMediumColor.withOpacity(.6),
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ],

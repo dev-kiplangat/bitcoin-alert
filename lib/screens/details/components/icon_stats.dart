@@ -2,40 +2,54 @@ import 'package:crypto_tracker/constants.dart';
 import 'package:flutter/material.dart';
 
 class IconedStats extends StatelessWidget {
+  final String blocks;
+  final String transactions;
+  final String hodlingAddresses;
+  final String outputs;
+
   const IconedStats({
     Key? key,
+    required this.blocks,
+    required this.transactions,
+    required this.hodlingAddresses,
+    required this.outputs,
   }) : super(key: key);
 
-  Column infoIcons(String title, String value, String image) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          width: 70,
-          height: 70,
-          decoration: BoxDecoration(
-            color: Colors.teal.withOpacity(.09),
-            borderRadius: BorderRadius.circular(50),
-          ),
-          child: Center(
-            child: Image.asset(
-              'assets/images/$image',
-              height: 38,
+  Padding infoIcons(String title, String value, String image) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 10,
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Container(
+            width: 70,
+            height: 70,
+            decoration: BoxDecoration(
+              color: Colors.teal.withOpacity(.09),
+              borderRadius: BorderRadius.circular(50),
+            ),
+            child: Center(
+              child: Image.asset(
+                'assets/images/$image',
+                height: 38,
+              ),
             ),
           ),
-        ),
-        SizedBox(
-          height: 15,
-        ),
-        Text(title),
-        Text(
-          value,
-          style: TextStyle(color: kPrimaryColor),
-        ),
-        SizedBox(
-          height: 15,
-        ),
-      ],
+          SizedBox(
+            height: 15,
+          ),
+          Text(title),
+          Text(
+            value,
+            style: TextStyle(color: kPrimaryColor),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+        ],
+      ),
     );
   }
 
@@ -55,10 +69,10 @@ class IconedStats extends StatelessWidget {
         runSpacing: 10,
         spacing: 40,
         children: [
-          infoIcons("Blocks", "693, 184", "square-blocks-outline.png"),
-          infoIcons("Transactions", "658, 771, 067", "arrow.png"),
-          infoIcons("Outputs", "1, 790, 470, 928", "left-arrow.png"),
-          infoIcons("Addresses", "38, 265, 754", "wallet.png"),
+          infoIcons("Blocks", blocks, "square-blocks-outline.png"),
+          infoIcons("Transactions", transactions, "arrow.png"),
+          infoIcons("Outputs", outputs, "left-arrow.png"),
+          infoIcons("Addresses", hodlingAddresses, "wallet.png"),
         ],
       ),
     );

@@ -3,7 +3,6 @@ import 'package:crypto_tracker/screens/home/components/hero_card.dart';
 import 'package:crypto_tracker/screens/home/components/trending_coins.dart';
 import 'package:crypto_tracker/config/market.dart';
 import 'package:crypto_tracker/config/user.dart';
-import 'package:crypto_tracker/constants.dart';
 import 'package:crypto_tracker/screens/home/components/currencyLIst.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';

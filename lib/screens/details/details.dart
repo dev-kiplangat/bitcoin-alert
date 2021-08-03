@@ -8,39 +8,41 @@ import 'components/hero_card.dart';
 class DetailsScreen extends StatelessWidget {
   final data;
   final String title;
+  final String icon;
 
-  const DetailsScreen({Key? key, this.data, required this.title})
-      : super(key: key);
+  const DetailsScreen({
+    Key? key,
+    this.data,
+    required this.title,
+    required this.icon,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.red,
-        borderRadius: BorderRadius.all(Radius.circular(30)),
+        color: Colors.grey[100],
       ),
       child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: buildDetailsBar(context, title),
-          body: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 15,
-              vertical: 20,
+          body: Container(
+            // padding: EdgeInsets.symmetric(
+            //   horizontal: 15,
+            //   vertical: 20,
+            // ),
+            decoration: BoxDecoration(
+              color: Colors.red[100],
+              borderRadius: BorderRadius.all(
+                Radius.circular(30),
+              ),
             ),
             child: ListView(
               children: [
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        offset: Offset(5, 4),
-                        blurRadius: 13,
-                        color: Colors.black.withOpacity(.05),
-                      )
-                    ],
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 25,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +50,12 @@ class DetailsScreen extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      HeroCard(),
+                      HeroCard(
+                        icon: icon,
+                        value: data['market_price_usd'].toString(),
+                        change: data['market_price_usd_change_24h_percentage']
+                            .toString(),
+                      ),
                       SizedBox(
                         height: 10,
                       ),
@@ -58,17 +65,14 @@ class DetailsScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 40),
-                SectionTitle(
-                  title: "General Stats",
-                ),
                 SizedBox(height: 20),
                 Container(
                   padding: EdgeInsets.symmetric(
                     vertical: 30,
-                    horizontal: 15,
+                    horizontal: 20,
                   ),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(30),
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -87,15 +91,40 @@ class DetailsScreen extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      statsRow("Transactions", "253, 750"),
-                      statsRow("Blocks", "144"),
-                      statsRow("Transactions/second", "2.94"),
                       statsRow(
-                          "Avg. time between blocks", "9 minutes 55 seconds"),
-                      statsRow("Median transactions fee", "0.43 USD"),
-                      statsRow("Volume", "3, 197, 253.750 BTC"),
-                      statsRow("Average transaction fee", "2.38 USD"),
-                      statsRow("Hashrate", "97.87 Eh/s (SHA-256)"),
+                        "Transactions",
+                        data['transactions_24h'].toString(),
+                      ),
+                      statsRow(
+                        "Blocks",
+                        data['blocks_24h'].toString(),
+                      ),
+                      statsRow(
+                        "Transactions/second",
+                        data['average_transaction_fee_24h'].toString(),
+                      ),
+                      statsRow(
+                        "Avg. time between blocks",
+                        data['best_block_time'].toString(),
+                      ),
+                      statsRow(
+                        "Median transactions fee",
+                        data['median_transaction_fee_usd_24h'].toString() +
+                            " USD",
+                      ),
+                      statsRow(
+                        "Volume",
+                        data['volume_24h'].toString() + " BTC",
+                      ),
+                      statsRow(
+                        "Average transaction fee",
+                        data['average_transaction_fee_usd_24h'].toString() +
+                            " USD",
+                      ),
+                      statsRow(
+                        "Hashrate",
+                        data['hashrate_24h'].toString() + " Eh/s (SHA-256)",
+                      ),
                     ],
                   ),
                 ),
@@ -103,10 +132,10 @@ class DetailsScreen extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.symmetric(
                     vertical: 30,
-                    horizontal: 15,
+                    horizontal: 30,
                   ),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(30),
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -125,19 +154,37 @@ class DetailsScreen extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      statsRow("Transactions", "253, 750"),
-                      statsRow("Transactions/second", "2.94"),
-                      statsRow("Outputs", "130, 879"),
-                      statsRow("Fees", "6, 485.31 USD"),
-                      statsRow("Volume", "3, 197, 253.750 BTC"),
-                      statsRow("Size", "21.63 MB"),
                       statsRow(
-                          "Suggested transaction fee", "2 satoshi per second"),
+                        "Transactions",
+                        data['mempool_transactions'].toString(),
+                      ),
+                      statsRow(
+                        "Transactions/second",
+                        data['mempool_tps'].toString(),
+                      ),
+                      statsRow(
+                        "Outputs",
+                        data['mempool_outputs'].toString(),
+                      ),
+                      statsRow("Fees",
+                          data['mempool_total_fee_usd'].toString() + " USD"),
+                      statsRow("Volume", data['blockchain_size'].toString()),
+                      statsRow("Size", data['mempool_size'].toString() + " MB"),
+                      statsRow(
+                          "Suggested transaction fee",
+                          data['suggested_transaction_fee_per_byte_sat']
+                                  .toString() +
+                              " satoshi per second"),
                     ],
                   ),
                 ),
                 SizedBox(height: 40),
-                IconedStats(),
+                IconedStats(
+                  hodlingAddresses: data['hodling_addresses'].toString(),
+                  outputs: data['outputs'].toString(),
+                  transactions: data['transactions'].toString(),
+                  blocks: data['blocks'].toString(),
+                ),
                 SizedBox(height: 100),
               ],
             ),
@@ -146,7 +193,7 @@ class DetailsScreen extends StatelessWidget {
   }
 
   RichText buildInfoTextWithPercentage(
-      {required String title, required String percentage}) {
+      {required String value, required String percentage}) {
     return RichText(
       text: TextSpan(children: [
         TextSpan(
@@ -157,7 +204,7 @@ class DetailsScreen extends StatelessWidget {
           ),
         ),
         TextSpan(
-          text: "$title",
+          text: "$value",
           style: TextStyle(
             color: kTextMediumColor,
             height: 1.2,
