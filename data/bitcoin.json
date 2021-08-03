@@ -1,0 +1,697 @@
+{
+    "data": {
+      "bitcoin": {
+        "data": {
+          "blocks": 693718,
+          "transactions": 659520615,
+          "outputs": 1792866710,
+          "circulation": 1877320854497096,
+          "blocks_24h": 160,
+          "transactions_24h": 189001,
+          "difficulty": 14496442856349,
+          "volume_24h": 275496111009653,
+          "mempool_transactions": 4092,
+          "mempool_size": 4962732,
+          "mempool_tps": 2,
+          "mempool_total_fee_usd": 8351.4685,
+          "best_block_height": 693717,
+          "best_block_hash": "00000000000000000003f4fcbb59a7aaff7ce97dfee367085116802a9c4dadf0",
+          "best_block_time": "2021-08-01 12:34:59",
+          "blockchain_size": 357279883268,
+          "average_transaction_fee_24h": 5439,
+          "inflation_24h": 100000000000,
+          "median_transaction_fee_24h": 604,
+          "cdd_24h": 2940076.7887869095,
+          "mempool_outputs": 34004,
+          "largest_transaction_24h": {
+            "hash": "e17530d998721c66f7615f2b27b3d8c7ce2d1c63fc9a3584abb6853917b8358e",
+            "value_usd": 664675776
+          },
+          "nodes": 8326,
+          "hashrate_24h": "115299533289540335115",
+          "inflation_usd_24h": 41667000,
+          "average_transaction_fee_usd_24h": 2.266600774199184,
+          "median_transaction_fee_usd_24h": 0.25166868,
+          "market_price_usd": 41667,
+          "market_price_btc": 1,
+          "market_price_usd_change_24h_percentage": 0.11037,
+          "market_cap_usd": 782956093222,
+          "market_dominance_percentage": 45.66,
+          "next_retarget_time_estimate": "2021-08-12 19:41:25",
+          "next_difficulty_estimate": 15172864418078,
+          "countdowns": [],
+          "suggested_transaction_fee_per_byte_sat": 3,
+          "hodling_addresses": 38372938
+        }
+      },
+      "bitcoin-cash": {
+        "data": {
+          "blocks": 698860,
+          "transactions": 336923731,
+          "outputs": 886457706,
+          "circulation": 1880536239678941,
+          "blocks_24h": 144,
+          "transactions_24h": 82593,
+          "difficulty": 188033961865.04,
+          "volume_24h": 1099716045761259,
+          "mempool_transactions": 1820,
+          "mempool_size": 1386113,
+          "mempool_tps": 1.4166666666666667,
+          "mempool_total_fee_usd": 13.2332,
+          "best_block_height": 698859,
+          "best_block_hash": "00000000000000000599d58a99a408b981ca0111deb3a58c82883d0c35c27a1e",
+          "best_block_time": "2021-08-01 12:43:53",
+          "blockchain_size": 168391792334,
+          "average_transaction_fee_24h": 1377,
+          "inflation_24h": 90000000000,
+          "median_transaction_fee_24h": 220,
+          "cdd_24h": 2423844.8753401535,
+          "mempool_outputs": 12551,
+          "largest_transaction_24h": {
+            "hash": "cbff520e51b9657de4387ae950cdbd8e44845fb1484e2411bee8f5928d4f1e0f",
+            "value_usd": 50414468
+          },
+          "nodes": 1035,
+          "hashrate_24h": "1345999527912476945",
+          "inflation_usd_24h": 494019,
+          "average_transaction_fee_usd_24h": 0.007561615897515527,
+          "median_transaction_fee_usd_24h": 0.001207602,
+          "market_price_usd": 548.91,
+          "market_price_btc": 0.013173734610123,
+          "market_price_usd_change_24h_percentage": 1.11519,
+          "market_cap_usd": 10328508249,
+          "market_dominance_percentage": 0.6,
+          "countdowns": [],
+          "suggested_transaction_fee_per_byte_sat": 1,
+          "hodling_addresses": 17759620
+        }
+      },
+      "ethereum": {
+        "data": {
+          "blocks": 12939759,
+          "transactions": 1229869448,
+          "blocks_24h": 6292,
+          "circulation_approximate": "116928013593230000000000000",
+          "transactions_24h": 1211420,
+          "difficulty": 7203618933493003,
+          "volume_24h_approximate": "3729079690045655700000000",
+          "mempool_transactions": 68132,
+          "mempool_median_gas_price": 5000000000,
+          "mempool_tps": 18.2,
+          "mempool_total_value_approximate": "12405419807807313000000",
+          "best_block_height": 12939753,
+          "best_block_hash": "d89feddb32831db5a9d1141d28faac947ff995a305d4fd1dd0907e0b03d1d86e",
+          "best_block_time": "2021-08-01 13:02:20",
+          "uncles": 1165156,
+          "uncles_24h": 271,
+          "blockchain_size": 261907312354,
+          "calls": 3766099553,
+          "average_transaction_fee_24h": "4111835582658507",
+          "median_transaction_fee_24h": "1290138499999999",
+          "inflation_24h": 13066.6875,
+          "average_simple_transaction_fee_24h": "979348847671284",
+          "median_simple_transaction_fee_24h": "630000000000000",
+          "largest_transaction_24h": {
+            "hash": "0xafaedb1786efd4e27f8779063454c204c6daf0543d50e6add781ba7b27cb7159",
+            "value_usd": 738585205.0781
+          },
+          "hashrate_24h": "554124533345615",
+          "inflation_usd_24h": 33956400.80625,
+          "average_transaction_fee_usd_24h": 10.685427128654661,
+          "median_transaction_fee_usd_24h": 3.3526829199499995,
+          "average_simple_transaction_fee_usd_24h": 2.5450338504433665,
+          "median_simple_transaction_fee_usd_24h": 1.637181,
+          "market_price_usd": 2598.7,
+          "market_price_btc": 0.062368301053592,
+          "market_price_usd_change_24h_percentage": 5.58968,
+          "market_cap_usd": 304111013258,
+          "market_dominance_percentage": 17.74,
+          "layer_2": {
+            "erc_20": {
+              "tokens": 303790,
+              "transactions": 739765822,
+              "tokens_24h": 188,
+              "transactions_24h": 866899
+            }
+          },
+          "countdowns": [
+            {
+              "event": "eth2 launch",
+              "eth_staked": 6482082.000069,
+              "eth_needed": 524288
+            }
+          ],
+          "suggested_transaction_fee_gwei_options": {
+            "sloth": 0,
+            "slow": 23,
+            "normal": 24,
+            "fast": 27,
+            "cheetah": 60
+          },
+          "addresses": 141152553
+        }
+      },
+      "litecoin": {
+        "data": {
+          "blocks": 2096988,
+          "transactions": 79447302,
+          "outputs": 259647491,
+          "circulation": 6821039573347135,
+          "blocks_24h": 554,
+          "transactions_24h": 128763,
+          "difficulty": 9151856.1879157,
+          "volume_24h": 1937525356664263,
+          "mempool_transactions": 116,
+          "mempool_size": 38232,
+          "mempool_tps": 1.1,
+          "mempool_total_fee_usd": 0.4385,
+          "best_block_height": 2096987,
+          "best_block_hash": "ca5aef3a9a2529bf28df40b311909850443690bafcdfee4f06fc3d005dc7a139",
+          "best_block_time": "2021-08-01 13:02:25",
+          "blockchain_size": 45527548966,
+          "average_transaction_fee_24h": 10342,
+          "inflation_24h": 692500000000,
+          "median_transaction_fee_24h": 426,
+          "cdd_24h": 9873108.20519624,
+          "mempool_outputs": 393,
+          "largest_transaction_24h": {
+            "hash": "67a89aba9ad96149f7b85329163019ffdd9a6451bff891b688085ad06eed76d7",
+            "value_usd": 43755000
+          },
+          "nodes": 1330,
+          "hashrate_24h": "253593046565815",
+          "inflation_usd_24h": 1019706.25,
+          "average_transaction_fee_usd_24h": 0.015229455722296002,
+          "median_transaction_fee_usd_24h": 0.000627285,
+          "market_price_usd": 147.25,
+          "market_price_btc": 0.0035339717282262,
+          "market_price_usd_change_24h_percentage": 2.52613,
+          "market_cap_usd": 9839612585,
+          "market_dominance_percentage": 0.57,
+          "next_retarget_time_estimate": "2021-08-04 09:42:05",
+          "next_difficulty_estimate": 9582632,
+          "countdowns": [],
+          "suggested_transaction_fee_per_byte_sat": 1,
+          "hodling_addresses": 3916030
+        }
+      },
+      "bitcoin-sv": {
+        "data": {
+          "blocks": 698459,
+          "transactions": 648740268,
+          "outputs": 1509983328,
+          "circulation": 1880285164423905,
+          "blocks_24h": 137,
+          "transactions_24h": 536767,
+          "difficulty": 57345256988.885,
+          "volume_24h": 28162500347493,
+          "mempool_transactions": 205,
+          "mempool_size": 8475220,
+          "mempool_tps": 2.4,
+          "mempool_total_fee_usd": 7.1851,
+          "best_block_height": 698458,
+          "best_block_hash": "000000000000000006c333d793266864611341cce3e37503045bc8efa406b753",
+          "best_block_time": "2021-08-01 13:02:11",
+          "blockchain_size": 457431512144,
+          "average_transaction_fee_24h": 5801,
+          "inflation_24h": 85625000000,
+          "median_transaction_fee_24h": 547,
+          "cdd_24h": 784780.5998560954,
+          "mempool_outputs": 926,
+          "largest_transaction_24h": {
+            "hash": "576ae58681b194505e15c298b7e85701d81f22bb1a0c8f2992b5321f584817f2",
+            "value_usd": 1455084.625
+          },
+          "nodes": 198,
+          "hashrate_24h": "390946037054246768",
+          "inflation_usd_24h": 122957.5,
+          "average_transaction_fee_usd_24h": 0.008331636442903531,
+          "median_transaction_fee_usd_24h": 0.0007854919999999999,
+          "market_price_usd": 143.6,
+          "market_price_btc": 0.0034463724290206,
+          "market_price_usd_change_24h_percentage": 2.47465,
+          "market_cap_usd": 2701908852,
+          "market_dominance_percentage": 0.16,
+          "countdowns": [],
+          "suggested_transaction_fee_per_byte_sat": 1,
+          "hodling_addresses": 22091908
+        }
+      },
+      "dogecoin": {
+        "data": {
+          "blocks": 3836529,
+          "transactions": 77321704,
+          "outputs": 229200720,
+          "circulation": 13053778638370523000,
+          "blocks_24h": 1361,
+          "transactions_24h": 20872,
+          "difficulty": 4254764.0445021,
+          "volume_24h": 2302557431500677000,
+          "mempool_transactions": 338,
+          "mempool_size": 315459,
+          "mempool_tps": 0.25,
+          "mempool_total_fee_usd": 213.655,
+          "best_block_height": 3836528,
+          "best_block_hash": "cee43adacd176e61ce870cd6c93ebaf937dfbd54d110fd0f5a382a937169590d",
+          "best_block_time": "2021-08-01 13:02:24",
+          "blockchain_size": 44799191962,
+          "average_transaction_fee_24h": 210135485,
+          "inflation_24h": 1361000000000000,
+          "median_transaction_fee_24h": 125900000,
+          "cdd_24h": 14278966650.883892,
+          "mempool_outputs": 2526,
+          "largest_transaction_24h": {
+            "hash": "f20af7fae32c9b1682b1eb54d1ef3019f48591d13f8c6b78b5617046afc01487",
+            "value_usd": 46818712
+          },
+          "nodes": 1131,
+          "hashrate_24h": "290064638606319",
+          "inflation_usd_24h": 2873084.6100000003,
+          "average_transaction_fee_usd_24h": 0.44359811193513504,
+          "median_transaction_fee_usd_24h": 0.265776159,
+          "market_price_usd": 0.211101,
+          "market_price_btc": 0.0000050663834689322,
+          "market_price_usd_change_24h_percentage": 0.03172,
+          "market_cap_usd": 27597701094,
+          "market_dominance_percentage": 1.61,
+          "suggested_transaction_fee_per_byte_sat": 1,
+          "hodling_addresses": 4214351
+        }
+      },
+      "dash": {
+        "data": {
+          "blocks": 1514068,
+          "transactions": 38177460,
+          "outputs": 124419823,
+          "circulation": 1026613675914636,
+          "blocks_24h": 558,
+          "transactions_24h": 9886,
+          "difficulty": 173569907.39304,
+          "volume_24h": 1126647337236155,
+          "mempool_transactions": 15,
+          "mempool_size": 15834,
+          "mempool_tps": 0.15,
+          "mempool_total_fee_usd": 0.0548,
+          "best_block_height": 1514067,
+          "best_block_hash": "00000000000000034aadb52bcf097a95eb1bdec31fffcb7eb9fce1eb0e263bc4",
+          "best_block_time": "2021-08-01 13:01:57",
+          "blockchain_size": 22704879277,
+          "average_transaction_fee_24h": 6238,
+          "inflation_24h": 149469965676,
+          "median_transaction_fee_24h": 227,
+          "cdd_24h": 3202634.9580422593,
+          "mempool_outputs": 173,
+          "largest_transaction_24h": {
+            "hash": "aff730c8720e8aa8ea490c3b6f5e9554b51387ae602a8bd320607d65af0153a6",
+            "value_usd": 8290462.5
+          },
+          "nodes": 6239,
+          "hashrate_24h": "4840760221654295",
+          "inflation_usd_24h": 252185.72608854718,
+          "average_transaction_fee_usd_24h": 0.010524892009791623,
+          "median_transaction_fee_usd_24h": 0.0003829944,
+          "market_price_usd": 168.72,
+          "market_price_btc": 0.0040492476060192,
+          "market_price_usd_change_24h_percentage": 3.39931,
+          "market_cap_usd": 1732752330,
+          "market_dominance_percentage": 0.1,
+          "suggested_transaction_fee_per_byte_sat": 1,
+          "hodling_addresses": 1405675
+        }
+      },
+      "ripple": {
+        "data": {
+          "market_price_usd": 0.761562,
+          "market_price_btc": 0.000018277341781266,
+          "market_price_usd_change_24h_percentage": 1.22123,
+          "market_cap_usd": 35318308827,
+          "market_dominance_percentage": 2.06,
+          "ledgers": 65354711,
+          "best_ledger_height": 65354710,
+          "best_ledger_hash": "71B9750562773AEF1EF510214837487F2385EF3B1DEB44B25A286CA19AC70060",
+          "best_ledger_time": "2021-08-01 13:03:02",
+          "mempool_transactions": 26,
+          "mempool_total_fee_usd": 0.000231514848,
+          "circulation": 99990320232007500,
+          "average_transaction_fee_24h": 1123.4740188457401,
+          "median_transaction_fee_24h": 12,
+          "average_transaction_fee_usd_24h": 0.0008588970108815873,
+          "median_transaction_fee_usd_24h": 0.000009174012,
+          "ledgers_24h": 5239,
+          "transactions_24h": 179457,
+          "mempool_tps": 2.077048611111111,
+          "inflation_24h": -201958381,
+          "inflation_usd_24h": -154.397384232881,
+          "volume_24h": 121964050406300,
+          "largest_transaction_24h": {
+            "hash": "98A081812AB8D98B612A04C5ADEB1B8CF5583C226259249066295D3DC347112E",
+            "value_usd": 15066970.110149462
+          }
+        }
+      },
+      "groestlcoin": {
+        "data": {
+          "blocks": 3695627,
+          "transactions": 4830419,
+          "outputs": 9115047,
+          "circulation": 7808601888738880,
+          "blocks_24h": 1375,
+          "transactions_24h": 1833,
+          "difficulty": 378157.89999801,
+          "volume_24h": 43480052769250,
+          "mempool_transactions": 1,
+          "mempool_size": 2593,
+          "mempool_tps": 0.016666666666666666,
+          "mempool_total_fee_usd": 0.0004,
+          "best_block_height": 3695626,
+          "best_block_hash": "000000000000152789f813505823a7a9c620f1f340a15898a8bdf2f20bc6d3f7",
+          "best_block_time": "2021-08-01 13:01:17",
+          "blockchain_size": 2036602482,
+          "average_transaction_fee_24h": 24158,
+          "inflation_24h": 687500000000,
+          "median_transaction_fee_24h": 0,
+          "cdd_24h": 690357.7684815411,
+          "mempool_outputs": 19,
+          "largest_transaction_24h": {
+            "hash": "dcf10352f16c7ac365797da2faf64358b301e59482258022ab8f616e38302eb7",
+            "value_usd": 57937.9453
+          },
+          "nodes": 76,
+          "hashrate_24h": "26196321737959",
+          "inflation_usd_24h": 5459.465,
+          "average_transaction_fee_usd_24h": 0.0001918447780528969,
+          "median_transaction_fee_usd_24h": 0,
+          "market_price_usd": 0.794104,
+          "market_price_btc": 0.000019058343533252,
+          "market_price_usd_change_24h_percentage": -5.60112,
+          "market_cap_usd": 62242395,
+          "market_dominance_percentage": 0,
+          "suggested_transaction_fee_per_byte_sat": 1,
+          "hodling_addresses": 61084
+        }
+      },
+      "stellar": {
+        "data": {
+          "ledgers": 36651318,
+          "best_ledger_height": 36651318,
+          "best_ledger_hash": "f1e3974d1444e79651ae158162312431b1abe82f19e66602e7b9f169e766e605",
+          "best_ledger_time": "2021-08-01 13:02:13",
+          "circulation": 1054439020873472900,
+          "ledgers_24h": 15738,
+          "transactions_24h": 3718527,
+          "successful_transactions_24h": 3389261,
+          "failed_transactions_24h": 329266,
+          "operations_24h": 6719792,
+          "average_transaction_fee_24h": 194.86280173303075,
+          "average_transaction_fee_usd_24h": 0.00000564800087683103,
+          "market_price_usd": 0.289845,
+          "market_price_btc": 0.0000069562243502052,
+          "market_price_usd_change_24h_percentage": 4.33184,
+          "market_cap_usd": 6796797270,
+          "market_dominance_percentage": 0.4
+        }
+      },
+      "monero": {
+        "data": {
+          "blocks": 2417581,
+          "transactions": 15235518,
+          "circulation": 17964457569475970000,
+          "difficulty": 338900384505,
+          "hashrate_24h": 2824169870,
+          "mempool_transactions": 92,
+          "mempool_size": 179299000,
+          "best_block_height": 2417580,
+          "best_block_hash": "47ee3158d0113951ff1b3bb406138bdbacf6690b4a59057929383bad3f9d73d9",
+          "best_block_time": "2021-08-01 12:58:06",
+          "suggested_transaction_fee_per_byte_sat": 6,
+          "market_price_usd": 246.92,
+          "market_price_btc": 0.0059260325917393,
+          "market_price_usd_change_24h_percentage": 1.23789,
+          "market_cap_usd": 4443829194,
+          "market_dominance_percentage": 0.26
+        }
+      },
+      "cardano": {
+        "data": {
+          "blocks": 6055463,
+          "transactions": 10169750,
+          "best_block_epoch": 281,
+          "best_block_slot": 227873,
+          "best_block_height": 6055463,
+          "best_block_hash": "aad5576e2ffa0dff6a4b9319d6ff3efbb37d8d8d377952eb3c0532db02a572a6",
+          "best_block_time": "2021-08-01 13:02:44",
+          "blocks_24h": 4367,
+          "transactions_24h": 28483,
+          "circulation": 32257089461778920,
+          "blockchain_size": 9158945053,
+          "market_price_usd": 1.37,
+          "market_price_btc": 0.000032879736962104,
+          "market_price_usd_change_24h_percentage": 4.57791,
+          "market_cap_usd": 43874743034,
+          "market_dominance_percentage": 2.56
+        }
+      },
+      "zcash": {
+        "data": {
+          "blocks": 1339697,
+          "transactions": 8897073,
+          "outputs": 141428909,
+          "circulation": 1136190731974971,
+          "blocks_24h": 1150,
+          "transactions_24h": 4930,
+          "difficulty": 40845679.548045,
+          "volume_24h": 313541826725079,
+          "mempool_transactions": 3,
+          "mempool_size": 6341,
+          "mempool_tps": 0.03333333333333333,
+          "mempool_total_fee_usd": 0.0385,
+          "best_block_height": 1339696,
+          "best_block_hash": "00000000004ce6860d6760ffa8b85e49251d410f8e3ac3cfcedac8e635384cfc",
+          "best_block_time": "2021-08-01 13:02:05",
+          "blockchain_size": 27596809008,
+          "average_transaction_fee_24h": 23309,
+          "inflation_24h": 337868276943,
+          "median_transaction_fee_24h": 2068,
+          "cdd_24h": 8014990.7586943135,
+          "mempool_outputs": 47,
+          "largest_transaction_24h": {
+            "hash": "a1dd661608acbe5c96809bb6c74d2742806f429c0e0c8632e2ca18cf9926bf17",
+            "value_usd": 4476815.5
+          },
+          "nodes": 286,
+          "hashrate_24h": "4568631238",
+          "inflation_usd_24h": 1854592.7589678213,
+          "average_transaction_fee_usd_24h": 0.12794760638525354,
+          "median_transaction_fee_usd_24h": 0.011351458799999999,
+          "market_price_usd": 118.66,
+          "market_price_btc": 0.0028478172174623,
+          "market_price_usd_change_24h_percentage": 7.07514,
+          "market_cap_usd": 1349299660,
+          "market_dominance_percentage": 0.08,
+          "suggested_transaction_fee_per_byte_sat": 1,
+          "hodling_addresses": 787077
+        }
+      },
+      "mixin": {
+        "data": {
+          "snapshots": 110118862,
+          "snapshots_24h": 405000,
+          "transactions_24h": 405000,
+          "mempool_transactions": 0,
+          "tps_24h": 4.6875,
+          "best_snapshot_height": 110118861,
+          "best_snapshot_hash": "973df63b616f67a545ce141d9c6a927639a6ba0dc1f18d06ba22c26ba4e2651a",
+          "best_snapshot_time": "2021-08-01 13:02:58",
+          "circulation_xin": 600978.7671219499,
+          "circulation": 60097876712194.99,
+          "market_price_usd": 369.59,
+          "market_price_btc": 0.008870089039287685,
+          "market_price_usd_change_24h_percentage": 13.23,
+          "market_cap_usd": 222115742.54060146,
+          "market_dominance_percentage": 0.012953222910199956,
+          "accepted_nodes": 36,
+          "mintings": 885
+        }
+      },
+      "tezos": {
+        "data": {
+          "blocks": 1540091,
+          "operations": 56385009,
+          "operations_24h": 106,
+          "volume_24h": 1347198022,
+          "inflation_24h": 28750000,
+          "best_block_height": 1540090,
+          "best_block_hash": "BLQtbz6eJX33y8Li6F8jPmYKru3461fvx4KuPrc7yexvZCRv3dU",
+          "best_block_time": "2021-07-02 07:29:18",
+          "circulation_xtz": 843887380.217547,
+          "circulation": 843887380217547,
+          "market_price_usd": 2.91,
+          "market_price_btc": 0.00008585590369977,
+          "market_price_usd_change_24h_percentage": 3.57802,
+          "market_cap_usd": 2432565952,
+          "market_dominance_percentage": 0.17
+        }
+      },
+      "eos": {
+        "data": {
+          "blocks": 197324471,
+          "circulation_eos": 1031764290.0708,
+          "circulation_limit_eos": 10000000000,
+          "staked_eos": 393436467.1336,
+          "staked_percentage": 38.13239815719948,
+          "best_block_height": 197324471,
+          "best_block_time": "2021-08-01 13:03:13",
+          "best_block_producer": "hashfineosio",
+          "irreversible_block_height": 197324144,
+          "irreversible_block_hash": "0bc2ed702ac891b519ade4c04ad06bb22b2b9e9efe70d6d69b1dc4125d75ebed",
+          "ram_max_size": 265394551808,
+          "ram_allocated_size": 82963752472,
+          "ram_allocated_percentage": 31.260533385787145,
+          "market_price_usd": 4.11,
+          "market_price_btc": 0.000098639210886313,
+          "market_price_usd_change_24h_percentage": 1.69231,
+          "market_cap_usd": 3960382988,
+          "market_dominance_percentage": 0.23
+        }
+      },
+      "ecash": {
+        "data": {
+          "blocks": 697782,
+          "transactions": 297168079,
+          "outputs": 791473766,
+          "circulation": 1879862714678938,
+          "blocks_24h": 78,
+          "transactions_24h": 1161,
+          "difficulty": 14332872294.638,
+          "volume_24h": 15413708829776,
+          "mempool_transactions": 99,
+          "mempool_size": 25477,
+          "mempool_tps": 0.016666666666666666,
+          "mempool_total_fee_usd": 0.0194,
+          "best_block_height": 697781,
+          "best_block_hash": "000000000000000005fde3100f32d454134644c4077a66d080512fd8ba61af14",
+          "best_block_time": "2021-08-01 11:14:15",
+          "blockchain_size": 152046449261,
+          "average_transaction_fee_24h": 1262,
+          "inflation_24h": 48750000000,
+          "median_transaction_fee_24h": 250,
+          "cdd_24h": 1192296.540319746,
+          "mempool_outputs": 299,
+          "largest_transaction_24h": {
+            "hash": "a81f5020e56f47fbe3ccd85317281c53a03604d2c58ffd15632a7619cdcff0c0",
+            "value_usd": 813455.75
+          },
+          "nodes": 1035,
+          "hashrate_24h": "55609049467456636",
+          "inflation_usd_24h": 22225.125,
+          "average_transaction_fee_usd_24h": 0.0005754710645133506,
+          "median_transaction_fee_usd_24h": 0.00011397500000000002,
+          "market_price_usd": 0.00004559,
+          "market_price_btc": 1.0941512467899999e-9,
+          "market_price_usd_change_24h_percentage": -4.01251,
+          "market_cap_usd": 857029411.6221279,
+          "market_dominance_percentage": 0.05,
+          "countdowns": [],
+          "suggested_transaction_fee_per_byte_sat": 1,
+          "hodling_addresses": 15974602
+        }
+      },
+      "cross-chain": {
+        "tether": {
+          "data": {
+            "circulation": 62073053118.34,
+            "blockchains": {
+              "bitcoin": {
+                "circulation": 934435855.7,
+                "explorer": "https://blockchair.com/bitcoin/omni/property/31"
+              },
+              "ethereum": {
+                "circulation": 29430747630.050003,
+                "explorer": "https://blockchair.com/ethereum/erc-20/token/0xdac17f958d2ee523a2206206994597c13d831ec7"
+              },
+              "tron": {
+                "circulation": 31275057185.23,
+                "explorer": null
+              },
+              "eos": {
+                "circulation": 100250526.94,
+                "explorer": "https://blockchair.com/eos/account/tethertether"
+              },
+              "liquid": {
+                "circulation": 36561000,
+                "explorer": null
+              },
+              "algorand": {
+                "circulation": 94000019.79,
+                "explorer": null
+              },
+              "bitcoin-cash": {
+                "circulation": 6000898.77,
+                "explorer": "https://blockchair.com/bitcoin-cash/transaction/9fc89d6b7d5be2eac0b3787c5b8236bca5de641b5bafafc8f450727b63615c11"
+              },
+              "solana": {
+                "circulation": 196000001.88,
+                "explorer": null
+              }
+            }
+          }
+        },
+        "usd-coin": {
+          "data": {
+            "circulation": 27520785138.007214,
+            "blockchains": {
+              "ethereum": {
+                "circulation": 26536113045.20955,
+                "explorer": "https://blockchair.com/ethereum/erc-20/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+              },
+              "algorand": {
+                "circulation": 199672072.798208,
+                "explorer": null
+              },
+              "solana": {
+                "circulation": 785000019.99946,
+                "explorer": null
+              }
+            }
+          }
+        },
+        "binance-usd": {
+          "data": {
+            "circulation": 16366276311.31848,
+            "blockchains": {
+              "ethereum": {
+                "circulation": 12285746621.84,
+                "explorer": "https://blockchair.com/ethereum/erc-20/token/0x4fabb145d64652a948d72533023f6e7a623c7c53"
+              },
+              "binance-smart-chain": {
+                "circulation": 4080529689.478479,
+                "explorer": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "context": {
+      "code": 200,
+      "source": "D",
+      "cache": {
+        "live": false,
+        "duration": "Ignore",
+        "since": "2021-08-01 13:03:13",
+        "until": "2021-08-01 13:04:24",
+        "time": 0.0000050067901611328125
+      },
+      "api": {
+        "version": "2.0.82",
+        "last_major_update": "2020-07-19 00:00:00",
+        "next_major_update": "2021-07-19 00:00:00",
+        "documentation": "https://blockchair.com/api/docs",
+        "notice": "Beginning July 19th, 2021 `bitcoin-abc` paths will be renamed to `ecash`"
+      },
+      "time": 0.9155149459838867,
+      "render_time": 0.016728878021240234,
+      "full_time": 0.016733884811401367,
+      "request_cost": 1
+    }
+  }
