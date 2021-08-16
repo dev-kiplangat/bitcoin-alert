@@ -6,3 +6,7 @@ const kTextLightColor = Color(0xFFACB1C0);
 const kPrimaryColor = Color(0xFF0D8E53);
 const kBackgroundColor = Color(0xFFFCFCFC);
 const kInactiveChartColor = Color(0xFFEAECEF);
+
+const kDarkPrimary = Color(0xFFEAECEF);
+const kDarkTextMediumColor = Colors.orange;
+const kDarkBackgroundColor = Colors.black;

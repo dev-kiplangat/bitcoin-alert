@@ -1,4 +1,4 @@
-import 'package:crypto_tracker/constants.dart';
+import 'package:Rook/components/constants.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Future.delayed(Duration(seconds: 2), () {
       // navigate to  a new route and clear all the context
-      Navigator.pushNamedAndRemoveUntil(context, "/home", (r) => false);
+      Navigator.pushNamedAndRemoveUntil(context, "/login", (r) => false);
     });
   }
 
@@ -24,24 +24,14 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
-      backgroundColor: kPrimaryColor,
+      backgroundColor: Colors.white,
       body: Center(
-        child: RichText(
-          text: TextSpan(
-            children: [
-              TextSpan(
-                text: "Swatch",
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
-              TextSpan(
-                text: " Alerty",
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
-            ],
+        child: Text(
+          'Rook',
+          style: TextStyle(
+            color: kTextMediumColor,
+            fontWeight: FontWeight.bold,
+            fontSize: 33,
           ),
         ),
       ),

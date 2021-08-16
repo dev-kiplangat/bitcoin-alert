@@ -1,6 +1,6 @@
-import 'package:crypto_tracker/constants.dart';
-import 'package:crypto_tracker/screens/details/components/icon_stats.dart';
-import 'package:crypto_tracker/widgets/weekly_chart.dart';
+import 'package:Rook/components/constants.dart';
+import 'package:Rook/screens/details/components/icon_stats.dart';
+import 'package:Rook/widgets/weekly_chart.dart';
 import 'package:flutter/material.dart';
 import 'components/app_bar.dart';
 import 'components/hero_card.dart';

@@ -1,5 +1,5 @@
-import 'package:crypto_tracker/constants.dart';
-import 'package:crypto_tracker/widgets/weekly_chart.dart';
+import 'package:Rook/components/constants.dart';
+import 'package:Rook/widgets/weekly_chart.dart';
 import 'package:flutter/material.dart';
 
 class ChartPage extends StatefulWidget {

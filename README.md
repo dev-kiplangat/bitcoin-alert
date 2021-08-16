@@ -1,4 +1,4 @@
-# crypto_tracker
+# Rook
 
 A new Flutter project.
 

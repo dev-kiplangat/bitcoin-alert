@@ -1,5 +1,5 @@
-import 'package:crypto_tracker/constants.dart';
-import 'package:crypto_tracker/screens/alert/create_alert.dart';
+import 'package:Rook/components/constants.dart';
+import 'package:Rook/screens/alert/create_alert.dart';
 import 'package:flutter/material.dart';
 
 AppBar buildDetailsBar(

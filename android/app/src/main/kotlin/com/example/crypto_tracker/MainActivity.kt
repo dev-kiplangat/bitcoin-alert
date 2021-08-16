@@ -1,4 +1,4 @@
-package com.example.crypto_tracker
+package com.example.Rook
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,5 +1,7 @@
-import 'package:crypto_tracker/constants.dart';
+import 'package:Rook/components/constants.dart';
+import 'package:Rook/config/alerts.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:select_form_field/select_form_field.dart';
 
 import 'components/currencySelect.dart';
@@ -27,8 +29,8 @@ class _CreateAlertState extends State<CreateAlert> {
   final Map alertInfo = {
     "limit": "",
     "frequency": 'ONCE',
-    "curreny": "",
-    "label": "",
+    "currency": "",
+    "title": "selth",
   };
 
   final List<Map<String, dynamic>> _items = [
@@ -209,7 +211,8 @@ class _CreateAlertState extends State<CreateAlert> {
         ),
       ),
       onPressed: () {
-        print(alertInfo);
+        Provider.of<AlertsModel>(context, listen: false)
+            .publishAlert(alertInfo);
       },
       autofocus: true,
       child: Text(
@@ -234,11 +237,10 @@ class _CreateAlertState extends State<CreateAlert> {
   TextFormField buildTextForm() {
     return TextFormField(
       onChanged: (val) {
-        print('changing');
+        print(val);
         abyss(key: 'limit', value: val);
       },
       validator: (val) => validator(val),
-      controller: TextEditingController(),
       maxLength: 16,
       textAlign: TextAlign.center,
       keyboardType: TextInputType.numberWithOptions(

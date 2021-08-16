@@ -1,12 +1,12 @@
-import 'package:crypto_tracker/components/navigator.dart';
-import 'package:crypto_tracker/components/theme.dart';
-import 'package:crypto_tracker/config/alerts.dart';
-import 'package:crypto_tracker/config/market.dart';
-import 'package:crypto_tracker/config/user.dart';
-import 'package:crypto_tracker/screens/alert/create_alert.dart';
-import 'package:crypto_tracker/screens/login/login.dart';
-import 'package:crypto_tracker/screens/otp_verify/otp_verify.dart';
-import 'package:crypto_tracker/screens/splash_screen/splash_screen.dart';
+import 'package:Rook/components/navigator.dart';
+import 'package:Rook/components/theme.dart';
+import 'package:Rook/config/alerts.dart';
+import 'package:Rook/config/market.dart';
+import 'package:Rook/config/user.dart';
+import 'package:Rook/screens/alert/create_alert.dart';
+import 'package:Rook/screens/login/login.dart';
+import 'package:Rook/screens/otp_verify/otp_verify.dart';
+import 'package:Rook/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'crypto alert',
+      title: 'Rook',
       debugShowCheckedModeBanner: false,
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),

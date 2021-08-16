@@ -1,5 +1,5 @@
-import 'package:crypto_tracker/config/alerts.dart';
-import 'package:crypto_tracker/screens/alert/components/fallback.dart';
+import 'package:Rook/config/alerts.dart';
+import 'package:Rook/screens/alert/components/fallback.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

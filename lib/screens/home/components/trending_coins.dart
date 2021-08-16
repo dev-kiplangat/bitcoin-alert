@@ -1,5 +1,5 @@
-import 'package:crypto_tracker/components/chart_bar_text.dart';
-import 'package:crypto_tracker/widgets/weekly_chart.dart';
+import 'package:Rook/components/chart_bar_text.dart';
+import 'package:Rook/widgets/weekly_chart.dart';
 import 'package:flutter/material.dart';
 
 class TrendingCoins extends StatelessWidget {

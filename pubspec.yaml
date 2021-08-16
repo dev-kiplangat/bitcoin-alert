@@ -1,4 +1,4 @@
-name: crypto_tracker
+name: Rook
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -37,6 +37,8 @@ dependencies:
   select_form_field: ^2.2.0
   awesome_dialog: ^2.1.0
   flutter_animated_dialog: ^2.0.1
+  otp_autofill: ^1.0.0
+  flutter_launcher_icons: "^0.9.0"
 
 dev_dependencies:
   flutter_test:
@@ -59,6 +61,10 @@ flutter:
     - assets/images/
     - assets/vectors/
 
+flutter_icons:
+  image_path: "assets/apk_icon/logo.jpg"
+  android: true
+  ios: true
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

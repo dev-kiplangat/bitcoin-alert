@@ -1,5 +1,5 @@
-import 'package:crypto_tracker/config/market.dart';
-import 'package:crypto_tracker/config/misc.dart';
+import 'package:Rook/config/market.dart';
+import 'package:Rook/config/misc.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -1,8 +1,8 @@
-import 'package:crypto_tracker/constants.dart';
-import 'package:crypto_tracker/screens/alert/alert.dart';
-import 'package:crypto_tracker/screens/chart/chart.dart';
-import 'package:crypto_tracker/screens/home/home.dart';
-import 'package:crypto_tracker/screens/profile/profile.dart';
+import 'package:Rook/components/constants.dart';
+import 'package:Rook/screens/alert/alert.dart';
+import 'package:Rook/screens/chart/chart.dart';
+import 'package:Rook/screens/home/home.dart';
+import 'package:Rook/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
 
 class PageRenderer extends StatefulWidget {

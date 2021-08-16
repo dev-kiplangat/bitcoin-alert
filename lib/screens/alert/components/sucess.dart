@@ -1,5 +1,5 @@
-import 'package:crypto_tracker/constants.dart';
-import 'package:crypto_tracker/screens/alert/alert.dart';
+import 'package:Rook/components/constants.dart';
+import 'package:Rook/screens/alert/alert.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

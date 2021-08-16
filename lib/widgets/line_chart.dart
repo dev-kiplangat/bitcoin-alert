@@ -1,4 +1,4 @@
-import 'package:crypto_tracker/constants.dart';
+import 'package:Rook/components/constants.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 

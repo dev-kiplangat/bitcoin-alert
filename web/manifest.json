@@ -1,6 +1,6 @@
 {
-    "name": "crypto_tracker",
-    "short_name": "crypto_tracker",
+    "name": "Rook",
+    "short_name": "Rook",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
