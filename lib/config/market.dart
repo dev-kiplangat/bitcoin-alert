@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:Rook/config/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
@@ -21,6 +22,7 @@ class Market extends ChangeNotifier {
   Future fetchCurrency() async {
     try {
       print('called set $loading');
+
       final http.Response response = await http.get(
         Uri.parse('https://api.blockchair.com/stats'),
       );

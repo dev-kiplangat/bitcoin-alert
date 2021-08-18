@@ -22,13 +22,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.6.1"
-  awesome_dialog:
-    dependency: "direct main"
-    description:
-      name: awesome_dialog
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -64,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
+  cool_alert:
+    dependency: "direct main"
+    description:
+      name: cool_alert
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0"
   crypto:
     dependency: transitive
     description:
@@ -158,6 +158,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.2"
+  lottie:
+    dependency: transitive
+    description:
+      name: lottie
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0"
   matcher:
     dependency: transitive
     description:
@@ -249,13 +256,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.0"
-  simple_animations:
-    dependency: transitive
-    description:
-      name: simple_animations
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -296,20 +296,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
-  supercharged:
-    dependency: transitive
-    description:
-      name: supercharged
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0"
-  supercharged_dart:
-    dependency: transitive
-    description:
-      name: supercharged_dart
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0"
   telephony:
     dependency: "direct main"
     description:

@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(Duration(seconds: 5), () {
       // navigate to  a new route and clear all the context
       Navigator.pushNamedAndRemoveUntil(context, "/login", (r) => false);
     });
@@ -24,16 +24,17 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Text(
-          'Rook',
-          style: TextStyle(
-            color: kTextMediumColor,
-            fontWeight: FontWeight.bold,
-            fontSize: 33,
+      backgroundColor: Colors.transparent,
+      body: Stack(
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/hero.png"),
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

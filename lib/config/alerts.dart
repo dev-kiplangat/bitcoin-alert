@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:Rook/config/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
@@ -22,13 +23,17 @@ class AlertsModel extends ChangeNotifier {
 
   Future publishAlert(Map alertInfo, String token) async {
     try {
-      final http.Response response = await http.post(
-          Uri.parse('http://192.168.139.75:1080/create-alert'),
-          headers: {"Authorization": token},
-          body: alertInfo);
+      final url = serverUrl() + "/create-alert";
+
+      final http.Response response = await http.post(Uri.parse(url),
+          headers: {"Authorization": token}, body: alertInfo);
 
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
+
+        if (data['success'] == true) {
+          return 0;
+        }
         print(data);
       }
     } catch (err) {
@@ -38,9 +43,10 @@ class AlertsModel extends ChangeNotifier {
 
   Future getALerts(String token) async {
     try {
-      final http.Response response = await http.get(
-          Uri.parse('http://192.168.139.75:1080/fetch-alerts'),
-          headers: {"Authorization": token});
+      final url = serverUrl() + "/fetch-alerts";
+
+      final http.Response response =
+          await http.get(Uri.parse(url), headers: {"Authorization": token});
 
       if (response.statusCode == 200) {
         final data = json.decode(response.body);

@@ -35,10 +35,10 @@ dependencies:
   telephony: ^0.1.4
   sms_autofill: ^2.0.1
   select_form_field: ^2.2.0
-  awesome_dialog: ^2.1.0
   flutter_animated_dialog: ^2.0.1
   otp_autofill: ^1.0.0
   flutter_launcher_icons: "^0.9.0"
+  cool_alert: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -62,7 +62,7 @@ flutter:
     - assets/vectors/
 
 flutter_icons:
-  image_path: "assets/apk_icon/logo.jpg"
+  image_path: "assets/apk_icon/logo.png"
   android: true
   ios: true
   #   - images/a_dot_ham.jpeg

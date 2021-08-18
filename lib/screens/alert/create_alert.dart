@@ -1,5 +1,6 @@
 import 'package:Rook/components/constants.dart';
 import 'package:Rook/config/alerts.dart';
+import 'package:Rook/config/user.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:select_form_field/select_form_field.dart';
@@ -211,8 +212,8 @@ class _CreateAlertState extends State<CreateAlert> {
         ),
       ),
       onPressed: () {
-        Provider.of<AlertsModel>(context, listen: false)
-            .publishAlert(alertInfo);
+        Provider.of<AlertsModel>(context, listen: false).publishAlert(
+            alertInfo, Provider.of<UserModel>(context, listen: false).token());
       },
       autofocus: true,
       child: Text(
