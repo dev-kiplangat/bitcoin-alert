@@ -1,16 +1,16 @@
-# Rook
+# CryptoBot
 
-A new Flutter project.
+A mobile applicaion that allows users to create tiny alerts for watching the price of any crypto currency and alerts the user via messages of any fluctuations.
 
-## Getting Started
+## Problem Statement
 
-This project is a starting point for a Flutter application.
+The application is powered by [flutter | dart](https://flutter.dev/docs). Dart makes api calls to [Nodejs](https://nodejs.org)  rest server which performs authentication, runs daemons and data storage.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Tooling Used
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-[Nodejs](https://nodejs.org) 
+-[Flutter](https://flutter.dev/docs)
+-[clicksend-sms](https://clicksend.com)
+-[Blockchair](https://blockchair/api)
+
